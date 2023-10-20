@@ -2,6 +2,9 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
+This little vue component dojo have a preset code written in SFC style and using the composition api. Your task will be to implement a new function to this basic TODO app.
+
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
