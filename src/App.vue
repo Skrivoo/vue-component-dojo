@@ -34,8 +34,8 @@
         </button>
       </div>
       <ul>
-        <li v-for="todo in todoList" :key="todo.id">
-          <span :class="{ done: todo.done }"> {{ todo.text }} </span>
+        <li v-for="todo in todoList" :key="todo.id" :class="{ done: todo.done }">
+          {{ todo.text }}
           <input type="checkbox" v-model="todo.done">
         </li>
       </ul>

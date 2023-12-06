@@ -8,13 +8,16 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "e2e-test:standalone": "playwright test"
   },
   "dependencies": {
     "vue": "3.3.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.40.1",
     "@rushstack/eslint-patch": "^1.2.0",
+    "@types/node": "^20.10.3",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/test-utils": "^2.3.2",
