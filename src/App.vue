@@ -5,7 +5,7 @@
   const newTodo = ref('')
   const todoList = ref([])
 
-  function addTodo() {
+  const addTodo = () => {
     todoList.value.push({
       id: id.value++,
       text: newTodo.value,
@@ -14,7 +14,7 @@
     newTodo.value = ''
   }
 
-  function clearTodo() {
+  const clearTodo = () => {
     todoList.value = [];
   }
 
