@@ -2,39 +2,24 @@
 
 This template should help get you started developing with Vue 3 in Vite.
 
-This little vue component dojo have a preset code written in SFC style and using the composition api. Your task will be to implement a new function to this basic TODO app.
+This little vue component dojo have a preset code written in SFC style and using the composition api. Your task will be to implement TODO app and make the static skeleton to dynamic.
 
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+### Start local webserver
 
 ```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+vite
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
 
 ```sh
-npm run test:unit
+vitest
+```
+
+### Run e2e tests to your app
+
+```sh
+npm run e2e-test:standalone
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
@@ -42,3 +27,12 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+### Useful links:
+https://vuejs.org/api/reactivity-core.html
+
+https://vuejs.org/api/built-in-directives.html
+
+https://www.w3schools.com/cssref/sel_class.php
+
+https://playwright.dev/docs/intro
