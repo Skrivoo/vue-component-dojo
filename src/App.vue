@@ -1,49 +1,35 @@
   <script setup>
   import { ref } from "vue";
 
-  const id = ref(0)
-  const newTodo = ref('')
   const todoList = ref([])
-
-  const addTodo = () => {
-    todoList.value.push({
-      id: id.value++,
-      text: newTodo.value,
-      done: false,
-    });
-    newTodo.value = ''
-  }
-
-  const clearTodo = () => {
-    todoList.value = [];
-  }
 
   </script>
 
   <template>
     <div class="e-grid e-grid-column e-grid-small e-grid-between" style="height: 200px">
       <div class="e-inputgroup e-cell e-cell-small">
-        <form @submit.prevent="addTodo">
-          <input class="e-input e-inputgroup__item e-inputgroup__item-fluid e-inputgroup__item-first" v-model="newTodo" type="text" placeholder="Type text here">
+        <form>
+          <input class="e-input e-inputgroup__item e-inputgroup__item-fluid e-inputgroup__item-first" type="text" placeholder="Type text here">
           <button class="e-btn">
             Add TODO
           </button>
         </form>
-        <button @click="clearTodo" class="e-btn">
+        <button class="e-btn">
           Clear TODO
         </button>
       </div>
       <ul>
-        <li v-for="todo in todoList" :key="todo.id" :class="{ done: todo.done }">
-          {{ todo.text }}
-          <input type="checkbox" v-model="todo.done">
+        <li>
+          Brush your teeth
+          <input type="checkbox">
+        </li>
+        <li style="text-decoration: line-through">
+          This one is done
+          <input type="checkbox" checked="checked">
         </li>
       </ul>
     </div>
   </template>
 
   <style>
-  .done {
-    text-decoration: line-through;
-  }
   </style>
