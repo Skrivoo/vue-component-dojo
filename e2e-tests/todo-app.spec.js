@@ -13,10 +13,10 @@ const todoItems = [
 
 test.describe('New Todo', () => {
   test('add one todo item', async ({page}) => {
-    const newTodo = page.getByPlaceholder('Type text here');
+    const newTodoTextBox = page.getByPlaceholder('Type text here');
 
-    await newTodo.fill(todoItems[0]);
-    await newTodo.press('Enter');
+    await newTodoTextBox.fill(todoItems[0]);
+    await newTodoTextBox.press('Enter');
 
     const firstItem = page.locator(`li:has-text("${todoItems[0]}")`);
     await expect(firstItem, {}).toHaveText([
@@ -25,13 +25,13 @@ test.describe('New Todo', () => {
   });
 
   test('add more todo items', async ({page}) => {
-    const newTodo = page.getByPlaceholder('Type text here');
+    const newTodoTextBox = page.getByPlaceholder('Type text here');
 
-    await newTodo.fill(todoItems[0]);
-    await newTodo.press('Enter');
+    await newTodoTextBox.fill(todoItems[0]);
+    await newTodoTextBox.press('Enter');
 
-    await newTodo.fill(todoItems[1]);
-    await newTodo.press('Enter');
+    await newTodoTextBox.fill(todoItems[1]);
+    await newTodoTextBox.press('Enter');
 
     const list = page.locator('ul');
     await expect(list, {}).toHaveText([
@@ -40,13 +40,13 @@ test.describe('New Todo', () => {
   });
 
   test('delete items button', async ({page}) => {
-    const newTodo = page.getByPlaceholder('Type text here');
+    const newTodoTextBox = page.getByPlaceholder('Type text here');
 
-    await newTodo.fill(todoItems[0]);
-    await newTodo.press('Enter');
+    await newTodoTextBox.fill(todoItems[0]);
+    await newTodoTextBox.press('Enter');
 
-    await newTodo.fill(todoItems[1]);
-    await newTodo.press('Enter');
+    await newTodoTextBox.fill(todoItems[1]);
+    await newTodoTextBox.press('Enter');
 
     await page.locator('button:has-text("Clear TODO")').click();
 
@@ -55,13 +55,13 @@ test.describe('New Todo', () => {
   });
 
   test('check an item as done', async ({page}) => {
-    const newTodo = page.getByPlaceholder('Type text here');
+    const newTodoTextBox = page.getByPlaceholder('Type text here');
 
-    await newTodo.fill(todoItems[0]);
-    await newTodo.press('Enter');
+    await newTodoTextBox.fill(todoItems[0]);
+    await newTodoTextBox.press('Enter');
 
-    await newTodo.fill(todoItems[2]);
-    await newTodo.press('Enter');
+    await newTodoTextBox.fill(todoItems[2]);
+    await newTodoTextBox.press('Enter');
 
     const firstItem = page.locator(`li:has-text("${todoItems[0]}")`);
     await firstItem.getByRole('checkbox').check();
