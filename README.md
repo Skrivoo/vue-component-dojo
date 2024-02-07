@@ -29,10 +29,16 @@ npm run lint
 ```
 
 ### Useful links:
+https://www.w3schools.com/js/js_objects.asp
+
 https://vuejs.org/api/reactivity-core.html
 
 https://vuejs.org/api/built-in-directives.html
 
 https://www.w3schools.com/cssref/sel_class.php
 
+https://vuejs.org/guide/essentials/class-and-style.html
+
 https://playwright.dev/docs/intro
+
+https://test-utils.vuejs.org/guide/essentials/forms
